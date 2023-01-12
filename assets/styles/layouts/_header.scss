@@ -1,0 +1,111 @@
+header {
+  background: url(../img/bg-slider-06.jpg) center/cover;
+  height: 110vh;
+  color: white;
+
+  //   *************************************************************
+  //NAVBAR
+
+  nav {
+    padding-top: 20px;
+    height: 10vh;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    align-items: center;
+    @media screen and (max-width: 700px) {
+      grid-template-columns: 50% 50%;
+      .list {
+        display: none;
+      }
+    }
+    .left {
+      text-align: center;
+      font-size: 3em;
+      font-weight: bold;
+      font-family: $font1;
+      text-transform: capitalize;
+    }
+    .list {
+      font-size: 0.8em;
+      font-family: $font3;
+      text-transform: uppercase;
+      transition: 0.3s;
+      @media screen and (max-width: 700px) {
+        display: none;
+      }
+
+      li {
+        cursor: pointer;
+        &:hover {
+          scale: 1.1;
+          font-weight: bold;
+        }
+      }
+    }
+    .list ul {
+      display: flex;
+      justify-content: space-between;
+    }
+    .right {
+      display: flex;
+      justify-content: center;
+      transition: 0.3s;
+      li {
+        padding: 15px;
+        &:hover {
+          scale: 1.2;
+        }
+        i {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  //   **************************************************************
+  // MAIN
+  .header-main {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      font-family: $font1;
+      font-size: 3.5em;
+      font-weight: 400;
+      letter-spacing: 4px;
+      color: rgb(166, 114, 69);
+      line-height: 0;
+      @media screen and (max-width: 700px) {
+        font-size: 2em;
+        line-height: 2;
+      }
+    }
+    h2 {
+      padding: 0 auto 15px;
+      text-transform: uppercase;
+      font-family: $font2;
+      font-size: 4em;
+      letter-spacing: 10px;
+      @media screen and (max-width: 700px) {
+        font-size: 2.5em;
+      }
+    }
+    span {
+      margin: 30px auto;
+      img {
+        font-size: 1.5em;
+      }
+    }
+    p {
+      text-align: center;
+      font-family: $font3;
+      letter-spacing: 10px;
+      font-size: 1.3em;
+      @media screen and (max-width: 700px) {
+        font-size: 0.7em;
+      }
+    }
+  }
+}
