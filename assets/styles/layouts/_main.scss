@@ -1,0 +1,73 @@
+.part1 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 60vh;
+  @media screen and (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
+  .right {
+    background: url(../img/store-01.jpg) center/cover;
+    @media screen and (max-width: 700px) {
+      display: none;
+    }
+  }
+  .left {
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  .left-container {
+    height: 100%;
+    border: dashed 2px $or;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      padding-top: 30px;
+      font-family: $font1;
+      font-size: 2.6em;
+      font-weight: 400;
+      color: $or;
+      line-height: 20px;
+      text-transform: capitalize;
+    }
+    h2 {
+      padding: 0 auto 15px;
+      text-transform: uppercase;
+      font-family: $font2;
+      font-size: 1.5em;
+    }
+    span {
+      margin: 20px auto;
+      span img {
+        font-size: 2em;
+      }
+    }
+    p {
+      padding: 0 10px;
+      text-align: center;
+      font-family: $font3;
+      font-size: 1em;
+    }
+    p + img {
+      border-radius: 100%;
+      width: 120px;
+      padding: 20px;
+    }
+    h3 {
+      font-family: $font3;
+      font-size: 1.2em;
+      letter-spacing: 2px;
+    }
+    h4 {
+      text-transform: uppercase;
+      font-family: $font2;
+      font-size: 0.9em;
+      color: silver;
+      padding-bottom: 30px;
+    }
+  }
+}

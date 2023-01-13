@@ -137,4 +137,82 @@ header .header-main p {
   header .header-main p {
     font-size: 0.7em;
   }
+}
+
+.part1 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 60vh;
+}
+@media screen and (max-width: 700px) {
+  .part1 {
+    grid-template-columns: 1fr;
+  }
+}
+.part1 .right {
+  background: url(../img/store-01.jpg) center/cover;
+}
+@media screen and (max-width: 700px) {
+  .part1 .right {
+    display: none;
+  }
+}
+.part1 .left {
+  background-color: rgb(238, 238, 238);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.part1 .left-container {
+  height: 100%;
+  border: dashed 2px rgb(166, 114, 69);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.part1 .left-container h1 {
+  padding-top: 30px;
+  font-family: allura, sans-serif;
+  font-size: 2.6em;
+  font-weight: 400;
+  color: rgb(166, 114, 69);
+  line-height: 20px;
+  text-transform: capitalize;
+}
+.part1 .left-container h2 {
+  padding: 0 auto 15px;
+  text-transform: uppercase;
+  font-family: poppins, sans-serif;
+  font-size: 1.5em;
+}
+.part1 .left-container span {
+  margin: 20px auto;
+}
+.part1 .left-container span span img {
+  font-size: 2em;
+}
+.part1 .left-container p {
+  padding: 0 10px;
+  text-align: center;
+  font-family: roboto, sans-serif;
+  font-size: 1em;
+}
+.part1 .left-container p + img {
+  border-radius: 100%;
+  width: 120px;
+  padding: 20px;
+}
+.part1 .left-container h3 {
+  font-family: roboto, sans-serif;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+}
+.part1 .left-container h4 {
+  text-transform: uppercase;
+  font-family: poppins, sans-serif;
+  font-size: 0.9em;
+  color: silver;
+  padding-bottom: 30px;
 }/*# sourceMappingURL=index.css.map */
