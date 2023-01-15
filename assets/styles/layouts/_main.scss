@@ -71,3 +71,588 @@
     }
   }
 }
+// <!-- ********************************************************** -->
+
+.part2 {
+  height: 160vh;
+  position: relative;
+  .menu {
+    height: 80%;
+  }
+  .background {
+    .topBg {
+      height: 70vh;
+      background: rgb(33, 32, 30);
+    }
+    .bottomBg {
+      height: 90vh;
+      background: url(../img/bg-menu-01.jpg) center/cover;
+    }
+  }
+  .menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 60%;
+    .menu-header {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      &.menu-header:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 5px;
+        background-color: $or;
+      }
+      ul {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin: 50px;
+        li {
+          cursor: pointer;
+          text-transform: capitalize;
+          font-size: 1.5em;
+          // text-decoration: underline;
+          line-height: 20px;
+          color: rgb(238, 238, 238);
+          padding-bottom: 15px;
+          border-bottom: 1px solid rgb(238, 238, 238);
+          transition: 0.5s;
+          @media screen and (max-width: 700px) {
+            font-size: 0.9em;
+            padding-bottom: 8px;
+            transform: none;
+          }
+          &:hover {
+            scale: 1.2;
+            transform: rotate(360deg);
+            @media screen and (max-width: 700px) {
+              transform: none;
+            }
+          }
+        }
+      }
+    }
+    h1 {
+      padding: 30px;
+      font-family: $font1;
+      font-size: 2.6em;
+      font-weight: 400;
+      color: $or;
+      line-height: 20px;
+      text-transform: capitalize;
+    }
+  }
+}
+.menu-grid {
+  background-color: rgb(238, 238, 238);
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "menu1 menu2"
+    "menu3 menu4"
+    "menu5 menu6"
+    "menu7 menu8";
+  padding: 10px;
+  @media screen and (max-width: 700px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu-01 {
+    grid-area: menu1;
+  }
+  .menu-02 {
+    grid-area: menu2;
+  }
+  .menu-03 {
+    grid-area: menu3;
+  }
+  .menu-04 {
+    grid-area: menu4;
+  }
+  .menu-05 {
+    grid-area: menu5;
+  }
+  .menu-06 {
+    grid-area: menu6;
+  }
+  .menu-07 {
+    grid-area: menu7;
+  }
+  .menu-08 {
+    grid-area: menu8;
+  }
+  div {
+    display: grid;
+    grid-template-columns: 30% 60% 10%;
+    align-items: center;
+    border-bottom: dashed 1px black;
+    margin: 0 10px;
+    img {
+      border-radius: 50%;
+      background: cover/center;
+      width: 100%;
+    }
+    h2 {
+      font-family: $font2;
+      font-size: 1em;
+      font-weight: 100;
+      color: black;
+      line-height: 30px;
+      text-transform: uppercase;
+      @media screen and (max-width: 700px) {
+        font-size: 0.7em;
+        line-height: 15px;
+      }
+    }
+    span {
+      display: block;
+      font-family: $font3;
+      font-size: 1em;
+      @media screen and (max-width: 700px) {
+        font-size: 0.7em;
+      }
+    }
+    .price {
+      display: block;
+      font-size: 1.5em;
+      color: $or;
+      text-align: right;
+      border-bottom: none;
+      @media screen and (max-width: 1000px) {
+        font-size: 1em;
+      }
+      @media screen and (max-width: 700px) {
+        font-size: 0.9em;
+      }
+    }
+  }
+}
+// <!-- ********************************************************** -->
+
+.part3 {
+  height: 100vh;
+  background-color: rgb(33, 32, 30);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media screen and (max-width: 700px) {
+    height: 200vh;
+  }
+  .part3-container {
+    margin-top: 80px;
+    width: 80%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    @media screen and (max-width: 700px) {
+      margin-top: 0px;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 40% 60%;
+      height: 100%;
+    }
+    .left {
+      background-color: black;
+      padding: 20px;
+      .left-container {
+        border: 1px dashed rgb(238, 238, 238);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        h1 {
+          padding-top: 30px;
+          font-family: $font1;
+          text-align: center;
+          font-size: 3em;
+          font-weight: 100;
+          color: $or;
+          line-height: 30px;
+          text-transform: capitalize;
+          @media screen and (max-width: 700px) {
+            font-size: 1em;
+            line-height: 15px;
+          }
+          span {
+            font-family: $font2;
+            font-size: 1em;
+            color: white;
+            text-transform: uppercase;
+            @media screen and (max-width: 700px) {
+              font-size: 0.7em;
+            }
+          }
+        }
+        h2 {
+          font-family: $font2;
+          font-size: 1em;
+          letter-spacing: 4px;
+          color: $or;
+          text-transform: uppercase;
+          @media screen and (max-width: 700px) {
+            font-size: 0.7em;
+          }
+        }
+        p {
+          text-align: center;
+          font-family: $font3;
+          font-size: 1em;
+          letter-spacing: 2px;
+          color: white;
+          text-transform: uppercase;
+          @media screen and (max-width: 700px) {
+            font-size: 0.7em;
+          }
+        }
+      }
+    }
+    .right {
+      background-color: rgb(238, 238, 238);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      h1 {
+        padding-top: 30px;
+        font-family: $font1;
+        text-align: center;
+        font-size: 3em;
+        font-weight: 100;
+        color: $or;
+        line-height: 40px;
+        text-transform: capitalize;
+        margin: 40px;
+        @media screen and (max-width: 700px) {
+          font-size: 1em;
+          margin: 0;
+        }
+        span {
+          font-family: $font2;
+          font-weight: bold;
+          font-size: 0.8em;
+          color: rgb(10, 10, 10);
+          text-transform: uppercase;
+          @media screen and (max-width: 700px) {
+            font-size: 0.7em;
+            width: 400px;
+          }
+        }
+      }
+      img {
+        width: 60px;
+      }
+      form {
+        text-align: center;
+        .form-containers {
+          margin: 50px auto;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+          row-gap: 30px;
+          column-gap: 15px;
+          @media screen and (max-width: 700px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+          input,
+          select {
+            position: relative;
+            border: none;
+            background: transparent;
+            padding: 10px;
+            @media screen and (max-width: 700px) {
+              padding: 0;
+            }
+          }
+          *:after {
+            content: "";
+            z-index: 1;
+            position: absolute;
+            height: 2px;
+            background-color: silver;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+          }
+        }
+      }
+      input[type="submit"] {
+        cursor: pointer;
+        font-family: $font2;
+        font-weight: bold;
+        font-size: 2em;
+        color: rgb(252, 251, 251);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        background-color: rgb(46, 45, 45);
+        padding: 10px 30px;
+        margin: 30px;
+        border-radius: 30px;
+        border: none;
+        transition: 0.3s;
+        &:hover {
+          scale: 1.1;
+        }
+        @media screen and (max-width: 700px) {
+          width: 80%;
+          font-size: 0.8em;
+          padding: 10px 10px;
+          margin: 30px auto;
+        }
+      }
+    }
+  }
+}
+
+// *********************************************************************
+.part4 {
+  min-height: 100vh;
+  padding: 30px;
+  background-color: rgb(33, 32, 30);
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
+  .part4-header {
+    text-align: center;
+    padding-top: 10%;
+
+    h1 {
+      font-family: $font1;
+      text-align: center;
+      font-size: 3em;
+      font-weight: 100;
+      color: $or;
+      line-height: 50px;
+      text-transform: capitalize;
+      margin: 40px;
+      @media screen and (max-width: 700px) {
+        font-size: 1em;
+        margin: 0;
+      }
+      span {
+        font-family: $font2;
+        font-weight: bold;
+        font-size: 1em;
+        color: rgb(255, 252, 252);
+        text-transform: uppercase;
+        @media screen and (max-width: 700px) {
+          font-size: 0.7em;
+          width: 400px;
+        }
+      }
+    }
+    img {
+      width: 50px;
+      margin: 50px;
+    }
+  }
+  .grid {
+    min-height: 500px;
+    display: grid;
+    grid-template-columns: 55% 45%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "l1 r"
+      "l2 r";
+    gap: 10px;
+    .part4-right {
+      grid-area: r;
+      background: url(../img/event-03.jpg) center/cover;
+      padding: 10%;
+      .containers {
+        position: relative;
+        background-color: white;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 30% 10px 0 10px;
+        &:after {
+          position: absolute;
+          content: "08 July";
+          word-break: break-all;
+          font-size: 2em;
+          color: white;
+          background-color: rgb(33, 32, 30);
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 30%;
+          height: 30%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @media screen and (max-width: 1200px) {
+            height: 20%;
+          }
+        }
+        h2 {
+          text-align: center;
+          font-family: $font2;
+          font-size: 1.5em;
+          letter-spacing: 2px;
+        }
+        p {
+          display: block;
+          font-family: $font3;
+          font-size: 1em;
+          color: silver;
+          letter-spacing: 2px;
+        }
+        a {
+          font-family: $font2;
+          color: black;
+          font-size: 1em;
+          text-transform: uppercase;
+          text-decoration: none;
+          letter-spacing: 2px;
+          transition: 0.3s;
+          &:hover {
+            scale: 1.2;
+          }
+        }
+      }
+    }
+    .part4-left {
+      .info1 {
+        grid-area: l1;
+        background-color: white;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        .img {
+          position: relative;
+          background: url(../img/event-01.jpg) center/cover;
+          &:after {
+            position: absolute;
+            content: "08 July";
+            word-break: break-all;
+            font-size: 2em;
+            color: white;
+            background-color: rgb(33, 32, 30);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40%;
+            height: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+        .containers {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          padding-top: 40px;
+          padding-bottom: 40px;
+          padding-left: 20px;
+
+          h2 {
+            font-family: $font2;
+            font-size: 1.5em;
+            letter-spacing: 2px;
+            text-transform: capitalize;
+          }
+          p {
+            display: block;
+            font-family: $font3;
+            font-size: 1em;
+            color: silver;
+            letter-spacing: 2px;
+          }
+          a {
+            font-family: $font2;
+            color: black;
+            font-size: 1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 2px;
+            transition: 0.3s;
+            &:hover {
+              scale: 1.1;
+            }
+          }
+        }
+      }
+      .info2 {
+        margin-top: 10px;
+        grid-area: l2;
+        background-color: white;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        .img {
+          position: relative;
+          background: url(../img/event-02.jpg) center/cover;
+          &:after {
+            position: absolute;
+            content: "08 July";
+            word-break: break-all;
+            font-size: 2em;
+            color: white;
+            background-color: rgb(33, 32, 30);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40%;
+            height: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+        .containers {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          padding-top: 40px;
+          padding-bottom: 40px;
+          padding-left: 20px;
+
+          h2 {
+            font-family: $font2;
+            font-size: 1.5em;
+            letter-spacing: 2px;
+            text-transform: capitalize;
+          }
+          p {
+            display: block;
+            font-family: $font3;
+            font-size: 1em;
+            color: silver;
+            letter-spacing: 2px;
+          }
+          a {
+            font-family: $font2;
+            color: black;
+            font-size: 1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 2px;
+            transition: 0.3s;
+            &:hover {
+              scale: 1.1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
