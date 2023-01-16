@@ -1,0 +1,75 @@
+footer {
+  .containers {
+    background: url(../img/bg-footer.jpg) center/cover;
+    min-height: 30vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-top: 50px;
+    transition: 0.4s;
+    @media screen and (max-width: 600px) {
+      background: url(../img/bg-footer.jpg) right/cover;
+    }
+    .left {
+      padding-left: 30%;
+      padding-right: 10%;
+      padding-bottom: 50px;
+      h1 {
+        font-size: 3em;
+        font-weight: 200;
+        font-family: $font1;
+        color: $or;
+        text-transform: capitalize;
+      }
+      p {
+        font-size: 1em;
+        color: white;
+        font-family: $font3;
+        line-height: 40px;
+      }
+      @media screen and (max-width: 600px) {
+        display: none;
+      }
+    }
+    .right {
+      padding-right: 30%;
+      padding-left: 10%;
+      padding-bottom: 50px;
+      color: white;
+      h1 {
+        text-transform: uppercase;
+        font-size: 1.2em;
+        font-family: $font3;
+      }
+      input {
+        border: 1px solid $or;
+        background: none;
+        max-width: 350px;
+        height: 30px;
+        color: silver;
+        padding: 0 30px;
+        margin-top: 20px;
+        @media screen and (max-width: 600px) {
+          padding: 0 0;
+        }
+      }
+
+      ul {
+        margin-top: 50px;
+        display: flex;
+        text-transform: uppercase;
+        font-size: 1em;
+        font-family: $font2;
+        li {
+          padding: 0 20px;
+          transition: 0.3s;
+          &:hover {
+            scale: 1.3;
+          }
+          a {
+            color: silver;
+          }
+        }
+      }
+    }
+  }
+}
